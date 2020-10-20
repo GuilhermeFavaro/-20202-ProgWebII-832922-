@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    
+    <title>Formulário Web 2 </title>
+</head>
+<body>
+<h1>Preencha o Formulário</h1>
+<form action="formulario.php" method="POST"> //campos de dados do formulário
+
+    <pre>
+        
+
+        Nome:  <input type="text" name="nome" placeholder="Nome do arquivo">
+        Código:<input type="number" name="codigo" placeholder="Código do cliente">
+
+        Campo de Texto
+        <textarea rows="3" cols="30" name="Texto"></textarea>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Enviar" id="enviar">
+    </p>
+
+</pre>
+<?php
+     class Form
+     {
+         private $codigo = $_POST['codigo'];
+         private $nome = $_POST['nome'];
+
+         public function getCodigo(){
+           if(is_numeric($codigo)){
+             return $this->codigo;
+            } 
+         }
+         public function setCodigo($codigo)
+         {
+             this->codigo = $codigo;
+         }
+         public function getNome(){
+            if(is_string($nome)){
+             return $this->nome;
+            }
+         }
+         public function setNome()
+         {
+             this->nome = $nome;
+         }
+
+     }
+
+
+
+public function validardados($nome,$codigo){
+    $arquive = fopen('dados.txt','w');
+if ($arquive == false) die('Não foi possível criar o arquivo.');
+ $text
+
+}
+
+public function listarpastas(){
+$path = "arquivos/";
+$exercicio = dir($path);
+
+echo "Lista de Arquivos do diretório ".$path.;
+while($arquive = $exercicio -> read()){
+echo "<a href='".$path.$arquive."'>".$arquive."</a><br />";
+}
+$exercicio -> close();
+
+}
+?>
+</body>
+</html>
